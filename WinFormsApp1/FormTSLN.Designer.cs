@@ -146,7 +146,7 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // Form5
+            // FormTSLN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -163,7 +163,8 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form5";
+            Name = "FormTSLN";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form5";
             ResumeLayout(false);
             PerformLayout();
