@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class FormGPTBH : Form
     {
-        public Form2()
+        public FormGPTBH()
         {
             InitializeComponent();
         }
@@ -25,10 +25,7 @@ namespace WinFormsApp1
             string a = textBox1.Text;
             string b = textBox2.Text;
             string c = textBox3.Text;
-
-            if (!double.TryParse(a, out soA)) MessageBox.Show("a khong phai so");
-            if (!double.TryParse(b, out soB)) MessageBox.Show("b khong phai so");
-            if (!double.TryParse(c, out soC)) MessageBox.Show("c khong phai so");
+            if (!double.TryParse(a, out soA) || !double.TryParse(b, out soB) || !double.TryParse(c, out soC)) MessageBox.Show("Lỗi kiểu dữ liệu không đúng: Vui lòng nhập số để thực hiện phép toán\nHoặc\nLỗi chưa nhập dữ liệu: Vui lòng nhập đầy đủ dữ liệu để thực hiện phép toán","Thông báo lỗi");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,6 +75,9 @@ namespace WinFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
         }
     }
 }

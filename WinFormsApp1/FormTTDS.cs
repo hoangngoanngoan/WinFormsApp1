@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class FormTTDS : Form
     {
-        public Form3()
+        public FormTTDS()
         {
             InitializeComponent();
         }
@@ -24,7 +24,6 @@ namespace WinFormsApp1
 
             if (!double.TryParse(textBox1.Text, out so))
             {
-
                 return false;
             }
             return true;
@@ -60,6 +59,7 @@ namespace WinFormsApp1
             else
             {
                 MessageBox.Show("Phai nhap so");
+                textBox1.Text = "";
             }
 
         }
